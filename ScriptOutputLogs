@@ -1,0 +1,268 @@
+pi@g49pi:~/TP-IoT $ sudo python3 G49send_beacon_data.py 
+Connecting to AWS IoT...
+Log: Received CONNACK (0, 0)
+Connected to AWS IoT
+Subscribing to MQTT topic $aws/things/g49pi/shadow/update/accepted
+Subscribing to MQTT topic $aws/things/g49Trace/shadow/update/accepted
+Log: Received SUBACK
+Log: Received SUBACK
+Sending sensor data to AWS IoT...
+{
+    "state": {
+        "reported": {
+            "beacons": [
+                {
+                    "uuid": "b9407f30f5f8466eaff925556b57fe6d",
+                    "minor": 9713,
+                    "address": "F8:CA:25:F1:83:35",
+                    "power": 182,
+                    "major": 10150,
+                    "rssi": -57
+                }
+            ],
+            "timestamp": "2016-06-13T19:27:40.025905"
+        }
+    }
+}
+Log: Sending PUBLISH (dFalse, q0, r0, m3, '$aws/things/g49pi/shadow/update', ... (217 bytes)
+Sent to AWS IoT
+Log: Received PUBLISH (d0, q0, r0, m0, '$aws/things/g49pi/shadow/update/accepted', ...  (513 bytes)
+Received message, topic: $aws/things/g49pi/shadow/update/accepted, payload:
+{
+    "state": {
+        "reported": {
+            "beacons": [
+                {
+                    "uuid": "b9407f30f5f8466eaff925556b57fe6d",
+                    "minor": 9713,
+                    "address": "F8:CA:25:F1:83:35",
+                    "power": 182,
+                    "major": 10150,
+                    "rssi": -57
+                }
+            ],
+            "timestamp": "2016-06-13T19:27:40.025905"
+        }
+    },
+    "timestamp": 1465817260,
+    "metadata": {
+        "reported": {
+            "beacons": [
+                {
+                    "uuid": {
+                        "timestamp": 1465817260
+                    },
+                    "minor": {
+                        "timestamp": 1465817260
+                    },
+                    "address": {
+                        "timestamp": 1465817260
+                    },
+                    "power": {
+                        "timestamp": 1465817260
+                    },
+                    "major": {
+                        "timestamp": 1465817260
+                    },
+                    "rssi": {
+                        "timestamp": 1465817260
+                    }
+                }
+            ],
+            "timestamp": {
+                "timestamp": 1465817260
+            }
+        }
+    },
+    "version": 291
+}
+Log: Received PUBLISH (d0, q0, r0, m0, '$aws/things/g49Trace/shadow/update/accepted', ...  (279 bytes)
+Received message, topic: $aws/things/g49Trace/shadow/update/accepted, payload:
+{
+    "state": {
+        "reported": {
+            "message": "Valid beacon to open Door",
+            "authorised": true,
+            "doorLocation": "Door1"
+        }
+    },
+    "timestamp": 1465817260,
+    "metadata": {
+        "reported": {
+            "message": {
+                "timestamp": 1465817260
+            },
+            "authorised": {
+                "timestamp": 1465817260
+            },
+            "doorLocation": {
+                "timestamp": 1465817260
+            }
+        }
+    },
+    "version": 745
+}
+Log: Received PUBLISH (d0, q0, r0, m0, '$aws/things/g49Trace/shadow/update/accepted', ...  (286 bytes)
+Received message, topic: $aws/things/g49Trace/shadow/update/accepted, payload:
+{
+    "state": {
+        "desired": {
+            "timestamp": "2016-06-13T19:27:40.616887",
+            "lockStatus": "unlock",
+            "doorLocation": "Door1"
+        }
+    },
+    "timestamp": 1465817261,
+    "metadata": {
+        "desired": {
+            "timestamp": {
+                "timestamp": 1465817261
+            },
+            "lockStatus": {
+                "timestamp": 1465817261
+            },
+            "doorLocation": {
+                "timestamp": 1465817261
+            }
+        }
+    },
+    "version": 746
+}
+Setting lockStatus to unlock...
+Authorised User
+Sending sensor data to AWS IoT...
+{
+    "state": {
+        "reported": {
+            "timestamp": "2016-06-13T19:27:51.399942",
+            "lockStatus": "unlock",
+            "doorLocation": "Door1"
+        }
+    }
+}
+Log: Sending PUBLISH (dFalse, q0, r0, m4, '$aws/things/g49Trace/shadow/update', ... (117 bytes)
+Sent to AWS IoT
+No need to actutate this attribute
+Log: Received PUBLISH (d0, q0, r0, m0, '$aws/things/g49Trace/shadow/update/accepted', ...  (288 bytes)
+Received message, topic: $aws/things/g49Trace/shadow/update/accepted, payload:
+{
+    "state": {
+        "reported": {
+            "timestamp": "2016-06-13T19:27:51.399942",
+            "doorLocation": "Door1",
+            "lockStatus": "unlock"
+        }
+    },
+    "timestamp": 1465817271,
+    "metadata": {
+        "reported": {
+            "timestamp": {
+                "timestamp": 1465817271
+            },
+            "doorLocation": {
+                "timestamp": 1465817271
+            },
+            "lockStatus": {
+                "timestamp": 1465817271
+            }
+        }
+    },
+    "version": 747
+}
+Sending sensor data to AWS IoT...
+{
+    "state": {
+        "reported": {
+            "beacons": [
+                {
+                    "uuid": "b9407f30f5f8466eaff925556b57fe6d",
+                    "minor": 9074,
+                    "address": "E0:95:23:72:BA:45",
+                    "power": 182,
+                    "major": 47685,
+                    "rssi": -78
+                }
+            ],
+            "timestamp": "2016-06-13T19:27:57.167862"
+        }
+    }
+}
+Log: Sending PUBLISH (dFalse, q0, r0, m5, '$aws/things/g49pi/shadow/update', ... (217 bytes)
+Sent to AWS IoT
+Log: Received PUBLISH (d0, q0, r0, m0, '$aws/things/g49pi/shadow/update/accepted', ...  (513 bytes)
+Received message, topic: $aws/things/g49pi/shadow/update/accepted, payload:
+{
+    "state": {
+        "reported": {
+            "beacons": [
+                {
+                    "uuid": "b9407f30f5f8466eaff925556b57fe6d",
+                    "minor": 9074,
+                    "address": "E0:95:23:72:BA:45",
+                    "power": 182,
+                    "major": 47685,
+                    "rssi": -78
+                }
+            ],
+            "timestamp": "2016-06-13T19:27:57.167862"
+        }
+    },
+    "timestamp": 1465817277,
+    "metadata": {
+        "reported": {
+            "beacons": [
+                {
+                    "uuid": {
+                        "timestamp": 1465817277
+                    },
+                    "minor": {
+                        "timestamp": 1465817277
+                    },
+                    "address": {
+                        "timestamp": 1465817277
+                    },
+                    "power": {
+                        "timestamp": 1465817277
+                    },
+                    "major": {
+                        "timestamp": 1465817277
+                    },
+                    "rssi": {
+                        "timestamp": 1465817277
+                    }
+                }
+            ],
+            "timestamp": {
+                "timestamp": 1465817277
+            }
+        }
+    },
+    "version": 292
+}
+Log: Received PUBLISH (d0, q0, r0, m0, '$aws/things/g49Trace/shadow/update/accepted', ...  (289 bytes)
+Received message, topic: $aws/things/g49Trace/shadow/update/accepted, payload:
+{
+    "state": {
+        "reported": {
+            "message": "No valid beacon found to open Door",
+            "authorised": false,
+            "doorLocation": "Door1"
+        }
+    },
+    "timestamp": 1465817277,
+    "metadata": {
+        "reported": {
+            "message": {
+                "timestamp": 1465817277
+            },
+            "authorised": {
+                "timestamp": 1465817277
+            },
+            "doorLocation": {
+                "timestamp": 1465817277
+            }
+        }
+    },
+    "version": 748
+}
+^Cpi@g49pi:~/TP-IoT $ 
