@@ -114,7 +114,7 @@ Sending sensor data to AWS IoT...
 
 -3. g49Door1 (Thing) 
   - Topic: $aws/things/g49Door1/shadow/update
-  - Remembers Application State, i,e whether beacon is authorised  	
+  - Remembers Application State, i.e whether beacon is authorised.	
   - will be updated based on g49pi sensor data
 	
 -4. g49_alert_authorised_beacon (Rule)
@@ -122,7 +122,7 @@ Sending sensor data to AWS IoT...
   - Query Statement: SELECT 'Valid beacon to open Door' as state.reported.message, true as state.reported.authorised, 'Door1' as state.reported.doorLocation FROM '$aws/things/g49Door1/shadow/update/documents' WHERE current.state.reported.authorised = true
    
 -5. g49_alert_unauthorised_beacon (Rule)
-  - Monitors g49Door1 (Thing) and sends a message that beacon is authorised to open door via a AWS IoT Republish Action to g49Trace (Thing).
+  - Monitors g49Door1 (Thing) and sends a message that beacon is unauthorised to open door via a AWS IoT Republish Action to g49Trace (Thing).
   - Query Statement: SELECT ‘No valid beacon to open Door' as state.reported.message, false as state.reported.authorised, 'Door1' as state.reported.doorLocation FROM '$aws/things/g49Door1/shadow/update/documents' WHERE current.state.reported.authorised = false
    
 -6. g49Trace (Thing) 
