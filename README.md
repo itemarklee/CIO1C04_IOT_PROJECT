@@ -30,7 +30,7 @@ Group Members:
 
 #4. For Raspberry Pi Device: 
 - Purpose: Script that captures data from our sensors, sends and receives updates to/from AWS IoT & performs actuation.
-- Key libraries and functions are explained in the comments of the script in green color. 
+- Key libraries and functions are explained in the comments of the script. 
   - File: G49send_beacon_data.py 
 - Sample Console Logs
   - File: ScriptOutputLogs
