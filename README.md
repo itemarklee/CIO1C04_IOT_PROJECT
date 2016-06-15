@@ -14,7 +14,7 @@ Group Members:
 
 #Files Description/Purpose
 #1. Schematic for AWS IoT
-- Purpose: Figure showing overall Schematic for our Device and AWS
+- Purpose: Figure showing overall Schematic for our prototype device (RaspberryPi) and AWS.
   - File: g49AWSRules.jpg
 
 #2. For AWS IoT
