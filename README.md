@@ -123,7 +123,7 @@ Sending sensor data to AWS IoT...
    
 -5. g49_alert_unauthorised_beacon (Rule)
   - Monitors g49Door1 (Thing) and sends a message that beacon is unauthorised to open door via a AWS IoT Republish Action to g49Trace (Thing).
-  - Query Statement: SELECT ‘No valid beacon to open Door' as state.reported.message, false as state.reported.authorised, 'Door1' as state.reported.doorLocation FROM '$aws/things/g49Door1/shadow/update/documents' WHERE current.state.reported.authorised = false
+  - Query Statement: SELECT ‘No valid beacon found to open Door' as state.reported.message, false as state.reported.authorised, 'Door1' as state.reported.doorLocation FROM '$aws/things/g49Door1/shadow/update/documents' WHERE current.state.reported.authorised = false
    
 -6. g49Trace (Thing) 
   - Topic: $aws/things/g49Trace/shadow/update 	
