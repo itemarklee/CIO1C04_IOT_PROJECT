@@ -87,7 +87,7 @@ Sending sensor data to AWS IoT...
     },
 ```
 #5. For AWS Lambda Function (to perform actuation)
-- Purpose: Sets desired state for device to act upon and updates to Slack for reporting. 
+- Purpose: Sets desired state for device (actuation) and updates to Slack for reporting. 
   - File: g49_ActuateDoor.py
 - Extract:
 ```
