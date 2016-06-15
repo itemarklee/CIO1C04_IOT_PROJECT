@@ -102,7 +102,7 @@ Sending sensor data to AWS IoT...
     }
 ```
 
-#6. For AWS Thing/Rules required (Based on Schematic: File: g49AWSRules.jpg)
+#6. For AWS Thing/Rules (Based on Schematic: File: g49AWSRules.jpg)
 -1. g49pi (Thing) 
   - Topic: $aws/things/g49pi/shadow/update
   - The Raspberry Pi that contains our Bluetooth low energy (BLE) radio. BLE received detects the beacons.
