@@ -121,13 +121,22 @@ Sending sensor data to AWS IoT...
   - will be updated based on g49pi sensor data
 	
 -4. g49_alert_authorised_beacon (Rule)
-  - Monitors g49Door1 (Thing) and sends a message that beacon is authorised to open door via a AWS IoT Republish Action to g49Trace (Thing).
+  - Monitors g49Door1 (Thing) and sends a message that beacon is authorised to open door via a AWS IoT Republish Action to g49Trace (Thing) $$aws/things/g49Trace/shadow/update.
   - Query Statement: SELECT 'Valid beacon to open Door' as state.reported.message FROM '$aws/things/g49Door1/shadow/update/documents' WHERE current.state.reported.authorised = true
    
 -5. g49_alert_unauthorised_beacon (Rule)
-  - Monitors g49Door1 (Thing) and sends a message that beacon is unauthorised to open door via a AWS IoT Republish Action to g49Trace (Thing).
+  - Monitors g49Door1 (Thing) and sends a message that beacon is unauthorised to open door via a AWS IoT Republish Action to g49Trace (Thing) $$aws/things/g49Trace/shadow/update.
   - Query Statement: SELECT 'No valid beacon found to open Door' as state.reported.message FROM '$aws/things/g49Door1/shadow/update/documents' WHERE current.state.reported.authorised = false
    
+-6. g49_FireUpdateTrace (Rule)
+  - Monitors g49Door1 (Thing) and sends application state data via a AWS IoT Republish Action to g49Trace (Thing) when fire detected, $$aws/things/g49Trace/shadow/update
+  - Query Statement: SELECT state.reported.authorised AS state.reported.authorised state.reported.fire AS state.reported.fire, state.reported.location AS state.reported.location, state.reported.studentIDsInArea AS state.reported.studentIDsInArea FROM '$aws/things/g49Door1/shadow/update/accepted' WHERE state.reported.fire='yes'
+ 
+-7. g49_NOFireUpdateTrace (Rule)
+ - Monitors g49Door1 (Thing) and sends application state data via a AWS IoT Republish Action to g49Trace (Thing) when NO fire detected, $$aws/things/g49Trace/shadow/update
+  - Query Statement: SELECT state.reported.authorised AS state.reported.authorised state.reported.fire AS state.reported.fire, state.reported.location AS state.reported.location, state.reported.studentIDsInArea AS state.reported.studentIDsInArea FROM '$aws/things/g49Door1/shadow/update/accepted' WHERE state.reported.fire='no'
+   
+
 -6. g49Trace (Thing) 
   - Topic: $aws/things/g49Trace/shadow/update 	
   - Used to show debug information when rules are triggered. g49ActuateDoor1(Rule) and g49_record_door1_data (Rule) will monitor this Thing to triggers Rules Actions. 
