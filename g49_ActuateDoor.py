@@ -79,8 +79,9 @@ replaceSlackChannels = {
 }
 
 # Log on to AWS as lambda_iot_user.  lambda_iot_user must be attached to policy LambdaExecuteIoTUpdate, defined above.
-aws_session = boto3.Session(aws_access_key_id='AKIAJE7ODGU4E5RJQC5Q',
-                            aws_secret_access_key='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',
+# modified for security reasons
+aws_session = boto3.Session(aws_access_key_id='XX',
+                            aws_secret_access_key='XX',
                             region_name='us-west-2')
 
 
