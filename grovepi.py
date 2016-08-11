@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-#
+# 
 # GrovePi Python library
 # v1.2.2
 #
