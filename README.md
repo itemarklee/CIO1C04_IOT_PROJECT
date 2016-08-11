@@ -54,41 +54,50 @@ Sending sensor data to AWS IoT...
                     "rssi": -57
                 }
             ],
-            "timestamp": "2016-06-13T19:27:40.025905"
+            "timestamp": "2016-08-13T19:27:40.025905"
         }
     }
 }
 ```
-- 2. Valid beacon detected to open door:
+- 2. Valid beacon (handicap user) detected to open door:
 ```
 "state": {
-        "reported": {
-            "message": "Valid beacon to open Door",
-            "authorised": true,
-            "doorLocation": "Door1"
-        }
+     "reported": {
+    	"authorised": true,
+    	"location": "Lab88"
     },
 ```
-- 3. No valid beacon detected to open door:
+- 3. Fire in Lab, handicap users still in Lab:
 ```
 "state": {
-        "reported": {
-            "message": "No valid beacon found to open Door",
-            "authorised": false,
-            "doorLocation": "Door1"
-        }
-    },
+    "reported": {
+    	"authorised": true,
+    	"fire": "yes",
+    	"location": "Lab88",
+    	"studentIDsInArea": "45058,39989,9713",
+     },
 ```
 - 4. Setting Door lock status to unlock (Actuation):
 ```
 "state": {
         "desired": {
-            "timestamp": "2016-06-13T19:27:40.616887",
+            "timestamp": "2016-08-13T19:27:40.616887",
             "lockStatus": "unlock",
             "doorLocation": "Door1"
         }
     },
 ```
+- 5. Setting Command Center LCD Screen for alerting (Actuation):
+```
+"state": {
+        "desired": {
+            "timestamp": "2016-08-13T19:27:40.616887",
+            "lockStatus": "unlock",
+            "doorLocation": "Door1"
+        }
+    },
+```
+
 #5. For AWS Lambda Functions (to perform actuation)
 - Function 1: Sets desired state for device (actuation). e.g. tells device from the cloud to unlock door. 
   - File: g49_ActuateDoor.py
