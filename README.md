@@ -136,16 +136,21 @@ Sending sensor data to AWS IoT...
  - Monitors g49Door1 (Thing) and sends application state data via a AWS IoT Republish Action to g49Trace (Thing) when NO fire detected, $$aws/things/g49Trace/shadow/update
   - Query Statement: SELECT state.reported.authorised AS state.reported.authorised state.reported.fire AS state.reported.fire, state.reported.location AS state.reported.location, state.reported.studentIDsInArea AS state.reported.studentIDsInArea FROM '$aws/things/g49Door1/shadow/update/accepted' WHERE state.reported.fire='no'
    
-
--6. g49Trace (Thing) 
+-8. g49Trace (Thing) 
   - Topic: $aws/things/g49Trace/shadow/update 	
-  - Used to show debug information when rules are triggered. g49ActuateDoor1(Rule) and g49_record_door1_data (Rule) will monitor this Thing to triggers Rules Actions. 
+  - Used to store application state. E.g. whether beacon is authorised for access, is door unlocked, handicap students in area, presence of fire in area.
+  - Change in application state used to trigger AWS IoT rules. i.e. perform Actuations.  
+  - g49_NoFireActuateDoor(Rule), g49_FireActuateDoorLCD and g49_record_door1_data (Rule) will monitor this Thing to triggers Rules Actions. 
 
--7. g49ActuateDoor1(Rule)
+-9. g49_NoFireActuateDoor(Rule)
   - Monitors g49Trace (Thing) and triggers a Lamda Action (Function name: g49_ActuateDoor) that will sent the desired state for the Raspberry Pi to perform an actuate function. i.e. open the electromagnetic door for the authorised handicap student.
-  - Query Statement: SELECT 'g49pi' as device, 'Door1' as doorLocation, 'lockStatus' as attribute, 'unlock' as value, 'desired' as desired_or_reported FROM '$aws/things/g49Trace/shadow/update/accepted' WHERE state.reported.authorised = true
+  - Query Statement: SELECT 'g49pi' as device, state.reported.location as doorLocation, 'lockStatus' as attribute, 'unlock' as value, 'desired' as desired_or_reported FROM '$aws/things/g49Trace/shadow/update/accepted' WHERE state.reported.authorised = true AND state.reported.fire = 'no'
+ 
+-10. g49_FireActuateDoorLCD(Rule)
+  - Monitors g49Trace (Thing) and triggers a Lamda Action (Function name: g49_ActuateLCD) that will sent the desired state for the Raspberry Pi to perform an actuate function. i.e. open the electromagnetic door during internal or external fire, send ID of handicap students who are still in the area during the fire to command center LCD to activate help.
+  - Query Statement: SELECT 'g49pi' as device, 'studentIDsInArea' as attribute, state.reported.studentIDsInArea as value, 'desired' as desired_or_reported FROM '$aws/things/g49Trace/shadow/update/accepted' WHERE state.reported.fire = 'yes'
   
--8. g49_record_door1_data (Rule)
+-11. g49_record_door1_data (Rule)
   - Monitors g49Trace (Thing) and trigger two Actions
 	  - DynamoDB Rule Action (insert into DynamoDB): To write all sensor data updates into a sensor data table to record the sensor data that can be use by our applications.
 	  - Lambda Rule Action (Function name: IndexSensorData) for Sumo logic: To write the sensor data into the Sumo Logic search engine to allow us to scan for the data by pattern, and to also generate charts and dashboard to help us understand the data better.
