@@ -112,8 +112,8 @@ Sending sensor data to AWS IoT...
 
 -2. g49_identify_beacon (Rule) 
   - Topic: $aws/things/g49pi/shadow/update/accepted
-  - Monitors g49pi (Thing) and reports whether beacon is authorized via a AWS IoT Republish Action to g49Door1 (Thing) 
-  - Query Statement: SELECT CASE get((SELECT * FROM state.reported.beacons WHERE major =10150 AND minor=9713),1).minor WHEN 9713 THEN true ELSE false END AS state.reported.authorised FROM '$aws/things/g49pi/shadow/update/accepted'
+  - Monitors g49pi (Thing) and reports whether beacon is authorized via a AWS IoT Republish Action to g49Door1 (Thing) and republishes data to g49Door1(Thing) $$aws/things/g49Door1/shadow/update
+  - Query Statement: SELECT CASE get((SELECT * FROM state.reported.beacons WHERE major =10150 AND minor=9713),1).minor WHEN 9713 THEN true ELSE false END AS state.reported.authorised, state.reported.studentIDsInArea AS state.reported.studentIDsInArea, state.reported.fire as state.reported.fire, state.reported.location as state.reported.location FROM '$aws/things/g49pi/shadow/update/accepted'
 
 -3. g49Door1 (Thing) 
   - Topic: $aws/things/g49Door1/shadow/update
