@@ -9,6 +9,9 @@ Group Members:
 - 1571042I:  CHIANG TECK MENG JIM
 - 1571149B: GAN GHIM CHIEW WINSTON 
 
+Supervisor:
+- Simon Ngeow
+
 #Installation Steps
 - For detailed installation steps, please email 1571046J@student.tp.edu.sg
 
