@@ -1,7 +1,7 @@
 
 
-#SMART IoT APPLICATIONS (CIO1C03) FINAL PROJECT
-#Part B: Application Documentation & Source Codes (SOFTWARE) 
+#CIO1C04 IOT PROJECT
+#Application Documentation & Source Codes (SOFTWARE) 
 - Created by Mark Lee
 
 Group Members:
