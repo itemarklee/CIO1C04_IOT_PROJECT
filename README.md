@@ -21,7 +21,7 @@ Supervisor:
   - File: g49AWSRules.jpg
 
 #2. For AWS IoT
-- Purpose: The following are required to validate the device to use with AWS IoT.
+- Purpose: The following are required to validate the device (RaspberryPi) to use with AWS IoT.
   - File: aws-iot-rootCA.crt
   - File: tp-iot-certificate.pem.crt
   - File: tp-iot-private.pem.key
@@ -89,8 +89,8 @@ Sending sensor data to AWS IoT...
         }
     },
 ```
-#5. For AWS Lambda Function (to perform actuation)
-- Purpose: Sets desired state for device (actuation) and updates to Slack for reporting. 
+#5. For AWS Lambda Functions (to perform actuation)
+- Function 1: Sets desired state for device (actuation). e.g. tells device from the cloud to unlock door. 
   - File: g49_ActuateDoor.py
 - Extract:
 ```
@@ -98,7 +98,21 @@ Sending sensor data to AWS IoT...
         "state": {
             desired_or_reported.lower(): {
                 "doorLocation": doorLocation2,
-                attribute2: value2,
+                attribute2: value2,   //Example: attribute 2=lockStatus, value 2=lock
+                "timestamp": timestamp2
+            }
+        }
+    }
+```
+
+- Function 2: Sets desired state for device (actuation). e.g. tells device from the cloud to display alert on Command Center LCD. 
+  - File: g49_ActuateLCD.py
+- Extract:
+```
+      payload = {
+        "state": {
+            desired_or_reported.lower(): {
+                attribute2: value2,  //Example: attribute2=StudentsIDInArea, value2=9712, 4958
                 "timestamp": timestamp2
             }
         }
