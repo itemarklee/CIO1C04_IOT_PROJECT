@@ -89,12 +89,13 @@ Sending sensor data to AWS IoT...
 - 5. Setting Command Center LCD Screen for alerting (Actuation):
 ```
 "state": {
-        "desired": {
-            "timestamp": "2016-08-13T19:27:40.616887",
-            "lockStatus": "unlock",
-            "doorLocation": "Door1"
+        "reported": {
+            "location": "Lab88",
+            "studentIDsInArea": "45058,10396",
+            "fire": "yes",
+            "authorised": false
         }
-    },
+},
 ```
 
 #5. For AWS Lambda Functions (to perform actuation)
