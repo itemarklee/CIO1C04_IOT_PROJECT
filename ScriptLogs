@@ -1,0 +1,972 @@
+Received message, topic: $aws/things/g49pi/shadow/update/accepted, payload:
+{
+    "version": 32,
+    "timestamp": 1470975833,
+    "state": {
+        "reported": {
+            "location": "Lab88",
+            "studentIDsInArea": "45058,10396,12848",
+            "timestamp": "2016-08-12T12:25:03.022112",
+            "fire": "no",
+            "beacons": [
+                {
+                    "address": "DB:19:B0:02:CF:78",
+                    "uuid": "b9407f30f5f8466eaff925556b57fe6d",
+                    "major": 7422,
+                    "power": 182,
+                    "minor": 45058,
+                    "rssi": -68
+                },
+                {
+                    "address": "FF:66:28:9C:EF:B5",
+                    "uuid": "b9407f30f5f8466eaff925556b57fe6d",
+                    "major": 57668,
+                    "power": 188,
+                    "minor": 10396,
+                    "rssi": -80
+                },
+                {
+                    "address": "DB:BB:32:30:45:3F",
+                    "uuid": "b9407f30f5f8466eaff925556b57fe6d",
+                    "major": 22,
+                    "power": 175,
+                    "minor": 12848,
+                    "rssi": -89
+                }
+            ]
+        }
+    },
+    "metadata": {
+        "reported": {
+            "location": {
+                "timestamp": 1470975833
+            },
+            "studentIDsInArea": {
+                "timestamp": 1470975833
+            },
+            "timestamp": {
+                "timestamp": 1470975833
+            },
+            "fire": {
+                "timestamp": 1470975833
+            },
+            "beacons": [
+                {
+                    "address": {
+                        "timestamp": 1470975833
+                    },
+                    "uuid": {
+                        "timestamp": 1470975833
+                    },
+                    "major": {
+                        "timestamp": 1470975833
+                    },
+                    "power": {
+                        "timestamp": 1470975833
+                    },
+                    "minor": {
+                        "timestamp": 1470975833
+                    },
+                    "rssi": {
+                        "timestamp": 1470975833
+                    }
+                },
+                {
+                    "address": {
+                        "timestamp": 1470975833
+                    },
+                    "uuid": {
+                        "timestamp": 1470975833
+                    },
+                    "major": {
+                        "timestamp": 1470975833
+                    },
+                    "power": {
+                        "timestamp": 1470975833
+                    },
+                    "minor": {
+                        "timestamp": 1470975833
+                    },
+                    "rssi": {
+                        "timestamp": 1470975833
+                    }
+                },
+                {
+                    "address": {
+                        "timestamp": 1470975833
+                    },
+                    "uuid": {
+                        "timestamp": 1470975833
+                    },
+                    "major": {
+                        "timestamp": 1470975833
+                    },
+                    "power": {
+                        "timestamp": 1470975833
+                    },
+                    "minor": {
+                        "timestamp": 1470975833
+                    },
+                    "rssi": {
+                        "timestamp": 1470975833
+                    }
+                }
+            ]
+        }
+    }
+}
+Log: Received PUBLISH (d0, q0, r0, m0, '$aws/things/g49Trace/shadow/update/accepted', ...  (168 bytes)
+Received message, topic: $aws/things/g49Trace/shadow/update/accepted, payload:
+{
+    "version": 80,
+    "timestamp": 1470975833,
+    "state": {
+        "reported": {
+            "message": "No valid beacon found to open Door"
+        }
+    },
+    "metadata": {
+        "reported": {
+            "message": {
+                "timestamp": 1470975833
+            }
+        }
+    }
+}
+Log: Received PUBLISH (d0, q0, r0, m0, '$aws/things/g49Trace/shadow/update/accepted', ...  (130 bytes)
+Received message, topic: $aws/things/g49Trace/shadow/update/accepted, payload:
+{
+    "version": 81,
+    "timestamp": 1470975833,
+    "state": {
+        "reported": {
+            "fire": "no"
+        }
+    },
+    "metadata": {
+        "reported": {
+            "fire": {
+                "timestamp": 1470975833
+            }
+        }
+    }
+}
+Sending sensor data to AWS IoT...
+{
+    "state": {
+        "reported": {
+            "location": "Lab88",
+            "studentIDsInArea": "45058,23841,10396,9713",
+            "timestamp": "2016-08-12T12:25:20.428207",
+            "fire": "no",
+            "beacons": [
+                {
+                    "address": "DB:19:B0:02:CF:78",
+                    "power": 182,
+                    "major": 7422,
+                    "uuid": "b9407f30f5f8466eaff925556b57fe6d",
+                    "minor": 45058,
+                    "rssi": -71
+                },
+                {
+                    "address": "E5:FF:5D:21:B2:3D",
+                    "power": 175,
+                    "major": 88,
+                    "uuid": "b9407f30f5f8466eaff925556b57fe6d",
+                    "minor": 23841,
+                    "rssi": -91
+                },
+                {
+                    "address": "FF:66:28:9C:EF:B5",
+                    "power": 188,
+                    "major": 57668,
+                    "uuid": "b9407f30f5f8466eaff925556b57fe6d",
+                    "minor": 10396,
+                    "rssi": -88
+                },
+                {
+                    "address": "F8:CA:25:F1:83:35",
+                    "power": 182,
+                    "major": 10150,
+                    "uuid": "b9407f30f5f8466eaff925556b57fe6d",
+                    "minor": 9713,
+                    "rssi": -66
+                }
+            ]
+        }
+    }
+}
+Log: Sending PUBLISH (dFalse, q0, r0, m4, '$aws/things/g49pi/shadow/update', ... (705 bytes)
+Sent to AWS IoT
+Log: Received PUBLISH (d0, q0, r0, m0, '$aws/things/g49pi/shadow/update/accepted', ...  (1670 bytes)
+Received message, topic: $aws/things/g49pi/shadow/update/accepted, payload:
+{
+    "version": 33,
+    "timestamp": 1470975850,
+    "state": {
+        "reported": {
+            "location": "Lab88",
+            "studentIDsInArea": "45058,23841,10396,9713",
+            "timestamp": "2016-08-12T12:25:20.428207",
+            "fire": "no",
+            "beacons": [
+                {
+                    "address": "DB:19:B0:02:CF:78",
+                    "uuid": "b9407f30f5f8466eaff925556b57fe6d",
+                    "major": 7422,
+                    "power": 182,
+                    "minor": 45058,
+                    "rssi": -71
+                },
+                {
+                    "address": "E5:FF:5D:21:B2:3D",
+                    "uuid": "b9407f30f5f8466eaff925556b57fe6d",
+                    "major": 88,
+                    "power": 175,
+                    "minor": 23841,
+                    "rssi": -91
+                },
+                {
+                    "address": "FF:66:28:9C:EF:B5",
+                    "uuid": "b9407f30f5f8466eaff925556b57fe6d",
+                    "major": 57668,
+                    "power": 188,
+                    "minor": 10396,
+                    "rssi": -88
+                },
+                {
+                    "address": "F8:CA:25:F1:83:35",
+                    "uuid": "b9407f30f5f8466eaff925556b57fe6d",
+                    "major": 10150,
+                    "power": 182,
+                    "minor": 9713,
+                    "rssi": -66
+                }
+            ]
+        }
+    },
+    "metadata": {
+        "reported": {
+            "location": {
+                "timestamp": 1470975850
+            },
+            "studentIDsInArea": {
+                "timestamp": 1470975850
+            },
+            "timestamp": {
+                "timestamp": 1470975850
+            },
+            "fire": {
+                "timestamp": 1470975850
+            },
+            "beacons": [
+                {
+                    "address": {
+                        "timestamp": 1470975850
+                    },
+                    "uuid": {
+                        "timestamp": 1470975850
+                    },
+                    "major": {
+                        "timestamp": 1470975850
+                    },
+                    "power": {
+                        "timestamp": 1470975850
+                    },
+                    "minor": {
+                        "timestamp": 1470975850
+                    },
+                    "rssi": {
+                        "timestamp": 1470975850
+                    }
+                },
+                {
+                    "address": {
+                        "timestamp": 1470975850
+                    },
+                    "uuid": {
+                        "timestamp": 1470975850
+                    },
+                    "major": {
+                        "timestamp": 1470975850
+                    },
+                    "power": {
+                        "timestamp": 1470975850
+                    },
+                    "minor": {
+                        "timestamp": 1470975850
+                    },
+                    "rssi": {
+                        "timestamp": 1470975850
+                    }
+                },
+                {
+                    "address": {
+                        "timestamp": 1470975850
+                    },
+                    "uuid": {
+                        "timestamp": 1470975850
+                    },
+                    "major": {
+                        "timestamp": 1470975850
+                    },
+                    "power": {
+                        "timestamp": 1470975850
+                    },
+                    "minor": {
+                        "timestamp": 1470975850
+                    },
+                    "rssi": {
+                        "timestamp": 1470975850
+                    }
+                },
+                {
+                    "address": {
+                        "timestamp": 1470975850
+                    },
+                    "uuid": {
+                        "timestamp": 1470975850
+                    },
+                    "major": {
+                        "timestamp": 1470975850
+                    },
+                    "power": {
+                        "timestamp": 1470975850
+                    },
+                    "minor": {
+                        "timestamp": 1470975850
+                    },
+                    "rssi": {
+                        "timestamp": 1470975850
+                    }
+                }
+            ]
+        }
+    }
+}
+Log: Received PUBLISH (d0, q0, r0, m0, '$aws/things/g49Trace/shadow/update/accepted', ...  (329 bytes)
+Received message, topic: $aws/things/g49Trace/shadow/update/accepted, payload:
+{
+    "version": 82,
+    "timestamp": 1470975851,
+    "state": {
+        "reported": {
+            "location": "Lab88",
+            "studentIDsInArea": "45058,23841,10396,9713",
+            "fire": "no",
+            "authorised": true
+        }
+    },
+    "metadata": {
+        "reported": {
+            "location": {
+                "timestamp": 1470975851
+            },
+            "studentIDsInArea": {
+                "timestamp": 1470975851
+            },
+            "fire": {
+                "timestamp": 1470975851
+            },
+            "authorised": {
+                "timestamp": 1470975851
+            }
+        }
+    }
+}
+Log: Received PUBLISH (d0, q0, r0, m0, '$aws/things/g49Trace/shadow/update/accepted', ...  (168 bytes)
+Received message, topic: $aws/things/g49Trace/shadow/update/accepted, payload:
+{
+    "version": 83,
+    "timestamp": 1470975851,
+    "state": {
+        "reported": {
+            "message": "No valid beacon found to open Door"
+        }
+    },
+    "metadata": {
+        "reported": {
+            "message": {
+                "timestamp": 1470975851
+            }
+        }
+    }
+}
+Log: Received PUBLISH (d0, q0, r0, m0, '$aws/things/g49Trace/shadow/update/accepted', ...  (130 bytes)
+Received message, topic: $aws/things/g49Trace/shadow/update/accepted, payload:
+{
+    "version": 84,
+    "timestamp": 1470975851,
+    "state": {
+        "reported": {
+            "fire": "no"
+        }
+    },
+    "metadata": {
+        "reported": {
+            "fire": {
+                "timestamp": 1470975851
+            }
+        }
+    }
+}
+Log: Received PUBLISH (d0, q0, r0, m0, '$aws/things/g49Trace/shadow/update/accepted', ...  (159 bytes)
+Received message, topic: $aws/things/g49Trace/shadow/update/accepted, payload:
+{
+    "version": 85,
+    "timestamp": 1470975851,
+    "state": {
+        "reported": {
+            "message": "Valid beacon to open Door"
+        }
+    },
+    "metadata": {
+        "reported": {
+            "message": {
+                "timestamp": 1470975851
+            }
+        }
+    }
+}
+Log: Received PUBLISH (d0, q0, r0, m0, '$aws/things/g49Trace/shadow/update/accepted', ...  (285 bytes)
+Received message, topic: $aws/things/g49Trace/shadow/update/accepted, payload:
+{
+    "version": 86,
+    "timestamp": 1470975852,
+    "state": {
+        "desired": {
+            "lockStatus": "unlock",
+            "timestamp": "2016-08-12T12:24:11.349184",
+            "doorLocation": "Lab88"
+        }
+    },
+    "metadata": {
+        "desired": {
+            "lockStatus": {
+                "timestamp": 1470975852
+            },
+            "timestamp": {
+                "timestamp": 1470975852
+            },
+            "doorLocation": {
+                "timestamp": 1470975852
+            }
+        }
+    }
+}
+Authorised User
+Sending sensor data to AWS IoT...
+{
+    "state": {
+        "reported": {
+            "lockStatus": "unlock",
+            "timestamp": "2016-08-12T12:25:37.021593",
+            "doorLocation": "Lab88"
+        }
+    }
+}Sending sensor data to AWS IoT...
+{
+    "state": {
+        "reported": {
+            "location": "Lab88",
+            "studentIDsInArea": "10396",
+            "timestamp": "2016-08-12T12:25:37.022570",
+            "fire": "yes",
+            "beacons": [
+                {
+                    "address": "FF:66:28:9C:EF:B5",
+                    "power": 188,
+                    "major": 57668,
+                    "uuid": "b9407f30f5f8466eaff925556b57fe6d",
+                    "minor": 10396,
+                    "rssi": -81
+                }
+            ]
+        }
+    }
+}
+
+Log: Sending PUBLISH (dFalse, q0, r0, m5, '$aws/things/g49pi/shadow/update', ... (283 bytes)
+Log: Sending PUBLISH (dFalse, q0, r0, m6, '$aws/things/g49Trace/shadow/update', ... (117 bytes)
+Sent to AWS IoT
+DOOR************Lab88
+No need to actutate this attribute
+Sent to AWS IoT
+Log: Received PUBLISH (d0, q0, r0, m0, '$aws/things/g49pi/shadow/update/accepted', ...  (207 bytes)
+Received message, topic: $aws/things/g49pi/shadow/update/accepted, payload:
+{
+    "version": 34,
+    "timestamp": 1470975866,
+    "state": {
+        "desired": {
+            "timestamp": "2016-08-12T12:24:25.316184",
+            "fire": "yes"
+        }
+    },
+    "metadata": {
+        "desired": {
+            "timestamp": {
+                "timestamp": 1470975866
+            },
+            "fire": {
+                "timestamp": 1470975866
+            }
+        }
+    }
+}
+EXTERNAL FIRE***********************
+Sending sensor data to AWS IoT...
+{
+    "state": {
+        "reported": {
+            "location": "Lab88",
+            "studentIDsInArea": "45058,10396",
+            "timestamp": "2016-08-12T12:25:54.925555",
+            "fire": "yes",
+            "beacons": [
+                {
+                    "address": "DB:19:B0:02:CF:78",
+                    "power": 182,
+                    "major": 7422,
+                    "uuid": "b9407f30f5f8466eaff925556b57fe6d",
+                    "minor": 45058,
+                    "rssi": -69
+                },
+                {
+                    "address": "FF:66:28:9C:EF:B5",
+                    "power": 188,
+                    "major": 57668,
+                    "uuid": "b9407f30f5f8466eaff925556b57fe6d",
+                    "minor": 10396,
+                    "rssi": -77
+                }
+            ]
+        }
+    }
+}
+Log: Sending PUBLISH (dFalse, q0, r0, m7, '$aws/things/g49pi/shadow/update', ... (425 bytes)
+Sent to AWS IoT
+Sending sensor data to AWS IoT...
+{
+    "state": {
+        "reported": {
+            "timestamp": "2016-08-12T12:25:55.036668",
+            "fire": "yes",
+            "doorLocation": "Lab88"
+        }
+    }
+}
+Log: Sending PUBLISH (dFalse, q0, r0, m8, '$aws/things/g49Trace/shadow/update', ... (108 bytes)
+Sent to AWS IoT
+Log: Received PUBLISH (d0, q0, r0, m0, '$aws/things/g49Trace/shadow/update/accepted', ...  (168 bytes)
+Received message, topic: $aws/things/g49Trace/shadow/update/accepted, payload:
+{
+    "version": 87,
+    "timestamp": 1470975866,
+    "state": {
+        "reported": {
+            "message": "No valid beacon found to open Door"
+        }
+    },
+    "metadata": {
+        "reported": {
+            "message": {
+                "timestamp": 1470975866
+            }
+        }
+    }
+}
+Log: Received PUBLISH (d0, q0, r0, m0, '$aws/things/g49pi/shadow/update/accepted', ...  (684 bytes)
+Received message, topic: $aws/things/g49pi/shadow/update/accepted, payload:
+{
+    "version": 35,
+    "timestamp": 1470975885,
+    "state": {
+        "reported": {
+            "location": "Lab88",
+            "studentIDsInArea": "10396",
+            "timestamp": "2016-08-12T12:25:37.022570",
+            "fire": "yes",
+            "beacons": [
+                {
+                    "address": "FF:66:28:9C:EF:B5",
+                    "uuid": "b9407f30f5f8466eaff925556b57fe6d",
+                    "major": 57668,
+                    "power": 188,
+                    "minor": 10396,
+                    "rssi": -81
+                }
+            ]
+        }
+    },
+    "metadata": {
+        "reported": {
+            "location": {
+                "timestamp": 1470975885
+            },
+            "studentIDsInArea": {
+                "timestamp": 1470975885
+            },
+            "timestamp": {
+                "timestamp": 1470975885
+            },
+            "fire": {
+                "timestamp": 1470975885
+            },
+            "beacons": [
+                {
+                    "address": {
+                        "timestamp": 1470975885
+                    },
+                    "uuid": {
+                        "timestamp": 1470975885
+                    },
+                    "major": {
+                        "timestamp": 1470975885
+                    },
+                    "power": {
+                        "timestamp": 1470975885
+                    },
+                    "minor": {
+                        "timestamp": 1470975885
+                    },
+                    "rssi": {
+                        "timestamp": 1470975885
+                    }
+                }
+            ]
+        }
+    }
+}
+Log: Received PUBLISH (d0, q0, r0, m0, '$aws/things/g49Trace/shadow/update/accepted', ...  (287 bytes)
+Received message, topic: $aws/things/g49Trace/shadow/update/accepted, payload:
+{
+    "version": 88,
+    "timestamp": 1470975885,
+    "state": {
+        "reported": {
+            "lockStatus": "unlock",
+            "timestamp": "2016-08-12T12:25:37.021593",
+            "doorLocation": "Lab88"
+        }
+    },
+    "metadata": {
+        "reported": {
+            "lockStatus": {
+                "timestamp": 1470975885
+            },
+            "timestamp": {
+                "timestamp": 1470975885
+            },
+            "doorLocation": {
+                "timestamp": 1470975885
+            }
+        }
+    }
+}
+Log: Received PUBLISH (d0, q0, r0, m0, '$aws/things/g49pi/shadow/update/accepted', ...  (1014 bytes)
+Received message, topic: $aws/things/g49pi/shadow/update/accepted, payload:
+{
+    "version": 36,
+    "timestamp": 1470975885,
+    "state": {
+        "reported": {
+            "location": "Lab88",
+            "studentIDsInArea": "45058,10396",
+            "timestamp": "2016-08-12T12:25:54.925555",
+            "fire": "yes",
+            "beacons": [
+                {
+                    "address": "DB:19:B0:02:CF:78",
+                    "uuid": "b9407f30f5f8466eaff925556b57fe6d",
+                    "major": 7422,
+                    "power": 182,
+                    "minor": 45058,
+                    "rssi": -69
+                },
+                {
+                    "address": "FF:66:28:9C:EF:B5",
+                    "uuid": "b9407f30f5f8466eaff925556b57fe6d",
+                    "major": 57668,
+                    "power": 188,
+                    "minor": 10396,
+                    "rssi": -77
+                }
+            ]
+        }
+    },
+    "metadata": {
+        "reported": {
+            "location": {
+                "timestamp": 1470975885
+            },
+            "studentIDsInArea": {
+                "timestamp": 1470975885
+            },
+            "timestamp": {
+                "timestamp": 1470975885
+            },
+            "fire": {
+                "timestamp": 1470975885
+            },
+            "beacons": [
+                {
+                    "address": {
+                        "timestamp": 1470975885
+                    },
+                    "uuid": {
+                        "timestamp": 1470975885
+                    },
+                    "major": {
+                        "timestamp": 1470975885
+                    },
+                    "power": {
+                        "timestamp": 1470975885
+                    },
+                    "minor": {
+                        "timestamp": 1470975885
+                    },
+                    "rssi": {
+                        "timestamp": 1470975885
+                    }
+                },
+                {
+                    "address": {
+                        "timestamp": 1470975885
+                    },
+                    "uuid": {
+                        "timestamp": 1470975885
+                    },
+                    "major": {
+                        "timestamp": 1470975885
+                    },
+                    "power": {
+                        "timestamp": 1470975885
+                    },
+                    "minor": {
+                        "timestamp": 1470975885
+                    },
+                    "rssi": {
+                        "timestamp": 1470975885
+                    }
+                }
+            ]
+        }
+    }
+}
+Log: Received PUBLISH (d0, q0, r0, m0, '$aws/things/g49Trace/shadow/update/accepted', ...  (272 bytes)
+Received message, topic: $aws/things/g49Trace/shadow/update/accepted, payload:
+{
+    "version": 89,
+    "timestamp": 1470975885,
+    "state": {
+        "reported": {
+            "timestamp": "2016-08-12T12:25:55.036668",
+            "fire": "yes",
+            "doorLocation": "Lab88"
+        }
+    },
+    "metadata": {
+        "reported": {
+            "timestamp": {
+                "timestamp": 1470975885
+            },
+            "fire": {
+                "timestamp": 1470975885
+            },
+            "doorLocation": {
+                "timestamp": 1470975885
+            }
+        }
+    }
+}
+Log: Received PUBLISH (d0, q0, r0, m0, '$aws/things/g49Trace/shadow/update/accepted', ...  (168 bytes)
+Received message, topic: $aws/things/g49Trace/shadow/update/accepted, payload:
+{
+    "version": 90,
+    "timestamp": 1470975885,
+    "state": {
+        "reported": {
+            "message": "No valid beacon found to open Door"
+        }
+    },
+    "metadata": {
+        "reported": {
+            "message": {
+                "timestamp": 1470975885
+            }
+        }
+    }
+}
+Log: Received PUBLISH (d0, q0, r0, m0, '$aws/things/g49Trace/shadow/update/accepted', ...  (314 bytes)
+Received message, topic: $aws/things/g49Trace/shadow/update/accepted, payload:
+{
+    "version": 91,
+    "timestamp": 1470975885,
+    "state": {
+        "reported": {
+            "location": "Lab88",
+            "studentIDsInArea": "10396",
+            "fire": "yes",
+            "authorised": false
+        }
+    },
+    "metadata": {
+        "reported": {
+            "location": {
+                "timestamp": 1470975885
+            },
+            "studentIDsInArea": {
+                "timestamp": 1470975885
+            },
+            "fire": {
+                "timestamp": 1470975885
+            },
+            "authorised": {
+                "timestamp": 1470975885
+            }
+        }
+    }
+}
+Log: Received PUBLISH (d0, q0, r0, m0, '$aws/things/g49Trace/shadow/update/accepted', ...  (168 bytes)
+Received message, topic: $aws/things/g49Trace/shadow/update/accepted, payload:
+{
+    "version": 92,
+    "timestamp": 1470975885,
+    "state": {
+        "reported": {
+            "message": "No valid beacon found to open Door"
+        }
+    },
+    "metadata": {
+        "reported": {
+            "message": {
+                "timestamp": 1470975885
+            }
+        }
+    }
+}
+Log: Received PUBLISH (d0, q0, r0, m0, '$aws/things/g49Trace/shadow/update/accepted', ...  (320 bytes)
+Received message, topic: $aws/things/g49Trace/shadow/update/accepted, payload:
+{
+    "version": 93,
+    "timestamp": 1470975886,
+    "state": {
+        "reported": {
+            "location": "Lab88",
+            "studentIDsInArea": "45058,10396",
+            "fire": "yes",
+            "authorised": false
+        }
+    },
+    "metadata": {
+        "reported": {
+            "location": {
+                "timestamp": 1470975885
+            },
+            "studentIDsInArea": {
+                "timestamp": 1470975885
+            },
+            "fire": {
+                "timestamp": 1470975885
+            },
+            "authorised": {
+                "timestamp": 1470975885
+            }
+        }
+    }
+}
+Log: Received PUBLISH (d0, q0, r0, m0, '$aws/things/g49Trace/shadow/update/accepted', ...  (239 bytes)
+Received message, topic: $aws/things/g49Trace/shadow/update/accepted, payload:
+{
+    "version": 94,
+    "timestamp": 1470975886,
+    "state": {
+        "desired": {
+            "studentIDsInArea": "45058,10396",
+            "timestamp": "2016-08-12T12:24:46.177409"
+        }
+    },
+    "metadata": {
+        "desired": {
+            "studentIDsInArea": {
+                "timestamp": 1470975886
+            },
+            "timestamp": {
+                "timestamp": 1470975886
+            }
+        }
+    }
+}
+Setting studentIDsInArea to 45058,10396...
+INTERNAL FIRE***********************
+COMMAND CENTER LCD******************************
+Sending sensor data to AWS IoT...
+{
+    "state": {
+        "reported": {
+            "location": "Lab88",
+            "studentIDsInArea": "45058,10396",
+            "timestamp": "2016-08-12T12:26:12.033551",
+            "fire": "no",
+            "beacons": [
+                {
+                    "address": "DB:19:B0:02:CF:78",
+                    "power": 182,
+                    "major": 7422,
+                    "uuid": "b9407f30f5f8466eaff925556b57fe6d",
+                    "minor": 45058,
+                    "rssi": -82
+                },
+                {
+                    "address": "FF:66:28:9C:EF:B5",
+                    "power": 188,
+                    "major": 57668,
+                    "uuid": "b9407f30f5f8466eaff925556b57fe6d",
+                    "minor": 10396,
+                    "rssi": -82
+                }
+            ]
+        }
+    }
+}
+Log: Sending PUBLISH (dFalse, q0, r0, m9, '$aws/things/g49pi/shadow/update', ... (424 bytes)
+Sent to AWS IoT
+Sending sensor data to AWS IoT...
+{
+    "state": {
+        "reported": {
+            "studentIDsInArea": "45058,10396",
+            "timestamp": "2016-08-12T12:26:12.134744",
+            "doorLocation": "Lab88"
+        }
+    }
+}
+Log: Sending PUBLISH (dFalse, q0, r0, m10, '$aws/things/g49Trace/shadow/update', ... (128 bytes)
+Sent to AWS IoT
+Log: Received PUBLISH (d0, q0, r0, m0, '$aws/things/g49Trace/shadow/update/accepted', ...  (233 bytes)
+Received message, topic: $aws/things/g49Trace/shadow/update/accepted, payload:
+{
+    "version": 95,
+    "timestamp": 1470975887,
+    "state": {
+        "desired": {
+            "studentIDsInArea": "10396",
+            "timestamp": "2016-08-12T12:24:46.396159"
+        }
+    },
+    "metadata": {
+        "desired": {
+            "studentIDsInArea": {
+                "timestamp": 1470975887
+            },
+            "timestamp": {
+                "timestamp": 1470975887
+            }
+        }
+    }
+}
+Setting studentIDsInArea to 10396...
+INTERNAL FIRE***********************
+COMMAND CENTER LCD******************************
+^Cpi@g49pi:~/TP-IoT $ 
