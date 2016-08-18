@@ -2,7 +2,7 @@
 
 #TP S.Dip - CIO1C04 IOT PROJECT
 #Application Documentation & Source Codes (SOFTWARE) 
-#Created by Mark Lee
+Created by Mark Lee
 
 Group Members:
 - 1571046J:  LEE YI WEI MARK
